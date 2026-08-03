@@ -6,22 +6,15 @@ const KEY_BACKEND_URL = 'prophydent-backend-url';
 export const getBackendUrl = () => {
   const savedUrl = localStorage.getItem(KEY_BACKEND_URL);
   if (savedUrl) {
-    if (savedUrl.includes('pdd-iawo.onrender.com')) {
+    if (savedUrl.includes('pdd-iawo.onrender.com') || savedUrl.includes('10.0.2.2')) {
       localStorage.removeItem(KEY_BACKEND_URL);
     } else {
       return resolveUrlForPlatform(savedUrl);
     }
   }
 
-  // Smart defaults based on platform
-  if (Capacitor.isNativePlatform()) {
-    // For native Android apps running in emulator, point to local machine loopback port
-    return 'http://10.0.2.2:5000/analyze';
-  } else {
-    // For web development, fallback to production space or localhost if in development
-    const isDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    return isDev ? 'http://localhost:5000/analyze' : DEFAULT_PRODUCTION_URL;
-  }
+  // Always connect to the live production backend URL on mobile and web
+  return DEFAULT_PRODUCTION_URL;
 };
 
 export const setBackendUrl = (url) => {
@@ -38,12 +31,5 @@ export const resetBackendUrl = () => {
 
 export const resolveUrlForPlatform = (url) => {
   if (!url) return DEFAULT_PRODUCTION_URL;
-  
-  // If running inside native Android and url points to localhost/127.0.0.1, map to 10.0.2.2
-  if (Capacitor.isNativePlatform()) {
-    if (url.includes('localhost') || url.includes('127.0.0.1')) {
-      return url.replace('localhost', '10.0.2.2').replace('127.0.0.1', '10.0.2.2');
-    }
-  }
   return url;
 };

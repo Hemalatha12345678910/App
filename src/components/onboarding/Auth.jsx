@@ -109,7 +109,7 @@ export default function Auth() {
 
   return (
     <div className="onboarding-screen">
-      <div className="auth-container fade-in">
+      <div className="auth-container fade-in" style={{ marginTop: '2.5rem', marginBottom: '2.5rem' }}>
         <button className="btn-icon back-btn" onClick={() => navigate('/role')} type="button">
           <ArrowLeft size={24} />
         </button>

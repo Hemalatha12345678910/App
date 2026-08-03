@@ -743,7 +743,7 @@ export default function UploadAnalysis({ onNavigate }) {
                         </div>
                       ) : doctors.length === 0 ? (
                         <div style={{ background: '#fef3c7', border: '1px solid #fde68a', borderRadius: '8px', padding: '0.8rem', fontSize: '0.82rem', color: '#b45309', textAlign: 'center' }}>
-                          No dentists in our network have registered under **{selectedSpecialty}** yet. You can save this report to your profile or choose another specialty.
+                          No dentists in our network have registered under <strong>{selectedSpecialty}</strong> yet. You can save this report to your profile or choose another specialty.
                         </div>
                       ) : (
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>

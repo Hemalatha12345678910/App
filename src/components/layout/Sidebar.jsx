@@ -56,9 +56,10 @@ export default function Sidebar() {
           .filter(item => item.roles.includes(profile.role))
           .map((item, index) => {
             let label = item.label;
+            if (item.label.includes('Treatment')) label = 'Treatment';
             if (profile.role === 'patient') {
-              if (item.label === 'Scans') label = 'My Scans';
-              if (item.label === 'Reports') label = 'My Reports';
+              if (item.label === 'Scans') label = 'Scans';
+              if (item.label === 'Reports') label = 'Reports';
             }
             
             return (

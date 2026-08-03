@@ -12,7 +12,7 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google {
             content {
@@ -31,3 +31,4 @@ plugins {
 
 rootProject.name = "Smile Guard AI"
 include(":app")
+apply(from = "capacitor.settings.gradle")

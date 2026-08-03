@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Cleartext (http://) is only permitted to the local dev backend reached via
+  `adb reverse tcp:5000 tcp:5000` or the Android emulator's host alias. Every other
+  destination — including whatever real server URL is set in Settings > Server URL —
+  must use HTTPS. This is what makes it safe to ship android:usesCleartextTraffic="false"
+  on the <application> element while local development still works.
+-->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="false">localhost</domain>
+        <domain includeSubdomains="false">10.0.2.2</domain>
+    </domain-config>
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

@@ -13,7 +13,7 @@ export default function RoleSelection() {
 
   return (
     <div className="onboarding-screen">
-      <div className="role-content fade-in" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div className="role-content fade-in" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '2.5rem', marginBottom: '2.5rem' }}>
         <Logo size={50} className="small-logo mb-6" />
         <h2>How will you be using Smile Guard AI?</h2>
         <p className="text-muted mb-8">Select your role to customize your experience.</p>

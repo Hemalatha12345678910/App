@@ -279,12 +279,21 @@
 .chatbot-send-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 .chatbot-send-btn:not(:disabled):hover { transform: scale(1.08); }
 
-@media (max-width: 480px) {
-  .chatbot-window {
-    right: 8px;
-    left: 8px;
-    width: auto;
-    bottom: 84px;
+@media (max-width: 768px) {
+  .chatbot-fab {
+    right: 14px;
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+    z-index: 1001;
   }
-  .chatbot-fab { right: 16px; bottom: 16px; }
+  .chatbot-window {
+    right: 10px;
+    left: 10px;
+    width: auto;
+    bottom: calc(134px + env(safe-area-inset-bottom, 0px));
+    max-height: 65vh;
+    z-index: 1002;
+  }
 }

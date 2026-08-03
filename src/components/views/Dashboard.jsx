@@ -283,7 +283,7 @@ export default function Dashboard({ onNavigate }) {
           <div style={{ textAlign: 'left' }}>
             <h4 style={{ margin: 0, fontWeight: '700', fontSize: '0.95rem', color: 'var(--color-text-main)' }}>Upcoming Appointment Scheduled</h4>
             <p style={{ margin: '0.2rem 0 0 0', fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>
-              Your dentist has scheduled a consultation: **{dashboardStats.upcomingAppointment}**
+              Your dentist has scheduled a consultation: <strong>{dashboardStats.upcomingAppointment}</strong>
             </p>
           </div>
         </div>
@@ -494,7 +494,7 @@ export default function Dashboard({ onNavigate }) {
           }}>
             <h3 style={{ marginBottom: '0.5rem', fontWeight: '700', color: 'var(--color-text-main)' }}>📅 Schedule Appointment</h3>
             <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginBottom: '1.5rem' }}>
-              Assign an appointment date and time for **{schedulerPatient.full_name}**. This will be visible on their dashboard.
+              Assign an appointment date and time for <strong>{schedulerPatient.full_name}</strong>. This will be visible on their dashboard.
             </p>
             <form onSubmit={handleSaveAppointment} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
               <div className="form-group" style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', textAlign: 'left' }}>

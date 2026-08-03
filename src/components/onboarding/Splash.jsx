@@ -15,9 +15,9 @@ export default function Splash() {
 
   return (
     <div className="splash-screen">
-      <div className="splash-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+      <div className="splash-content" style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', width: '90%', maxWidth: '360px' }}>
         <Logo size={100} className="splash-logo" />
-        <h1 className="splash-title" style={{ marginTop: '1.5rem' }}>Smile Guard AI</h1>
+        <h1 className="splash-title" style={{ marginTop: '1.2rem', marginBottom: '1.2rem', fontSize: '2rem', color: 'var(--color-primary)' }}>Smile Guard AI</h1>
         <div className="loading-spinner"></div>
       </div>
     </div>

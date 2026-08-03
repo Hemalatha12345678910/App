@@ -264,7 +264,7 @@ export default function TreatmentPlan() {
       )}
 
       {(selectedPatientId || role === 'patient') && (
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '1.5rem', width: '100%', alignItems: 'start' }}>
+        <div className="tp-main-grid">
           {/* Left Column - Core Timeline & Notes */}
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             {/* Progress bar */}
@@ -409,9 +409,9 @@ export default function TreatmentPlan() {
             {role === 'patient' && (
               <>
                 {/* Specialty Navigation */}
-                <div className="card mb-4" style={{ padding: '1.5rem' }}>
-                  <h3 style={{ fontSize: '1rem', fontWeight: '700', marginBottom: '1.2rem', color: 'var(--color-text-main)', textAlign: 'left' }}>Specialty Navigation</h3>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className="card mb-4" style={{ padding: '1.2rem' }}>
+                  <h3 style={{ fontSize: '1rem', fontWeight: '700', marginBottom: '1rem', color: 'var(--color-text-main)', textAlign: 'left' }}>Specialty Navigation</h3>
+                  <div className="tp-specialty-grid">
                     <div 
                       className="insight-item" 
                       style={{ flexDirection: 'column', alignItems: 'center', padding: '1rem', gap: '0.5rem', cursor: 'pointer', background: 'rgba(255,255,255,0.4)', borderRadius: '12px' }}
@@ -507,7 +507,7 @@ export default function TreatmentPlan() {
                     <div className="glass-panel" style={{ padding: '0.8rem 1rem', background: 'rgba(59,130,246,0.05)', borderLeft: '3px solid var(--color-primary)', marginBottom: '1rem', textAlign: 'left', borderRadius: '6px' }}>
                       <strong style={{ fontSize: '0.85rem', display: 'block', marginBottom: '0.2rem' }}>📅 Scheduled Appointment</strong>
                       <span style={{ fontSize: '0.8rem', color: 'var(--color-text-main)' }}>
-                        With **{patientAppointment.doctorName}** on **{patientAppointment.time}**
+                        With <strong>{patientAppointment.doctorName}</strong> on <strong>{patientAppointment.time}</strong>
                       </span>
                     </div>
                   )}

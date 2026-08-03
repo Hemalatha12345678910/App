@@ -1,0 +1,27 @@
+{
+  "users": {},
+  "patients": [
+    {
+      "id": "1",
+      "patientId": "PID-2026-7890",
+      "name": "Dines",
+      "dob": "19-02-2007",
+      "email": "dineshchandar190297@gmail.com",
+      "phone": "123456",
+      "status": "Active"
+    }
+  ],
+  "appointments": [],
+  "reports": [
+    {
+      "id": "1",
+      "patientName": "Dines",
+      "patientEmail": "dineshchandar190297@gmail.com",
+      "date": "2026-08-03",
+      "findings": "Calculus, Caries, Tooth Discolation",
+      "confidence": 27,
+      "summary": "**Clinical AI Analysis Report**\n\n**Detected Findings:** 2x caries, 10x calculus, 4x tooth_discolation\n**Average Detection Confidence:** 27.7%\n\n**Findings Breakdown:**\n- **caries**: 2 instance(s) detec..."
+    }
+  ],
+  "treatment_plans": {}
+}

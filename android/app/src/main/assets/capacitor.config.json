@@ -1,0 +1,10 @@
+{
+	"appId": "com.smileguardai.app",
+	"appName": "Smile Guard AI",
+	"webDir": "dist",
+	"plugins": {
+		"CapacitorHttp": {
+			"enabled": true
+		}
+	}
+}

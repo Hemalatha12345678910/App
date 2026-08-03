@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Settings as SettingsIcon, Moon, Sun, Shield, Save, CheckCircle, Loader2, User, LogOut, Server, RotateCcw } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import { getBackendUrl, setBackendUrl, resetBackendUrl } from '../../lib/config';
@@ -6,6 +7,7 @@ import { Capacitor } from '@capacitor/core';
 import './Settings.css';
 
 export default function Settings() {
+  const navigate = useNavigate();
   const [theme, setTheme] = useState('light');
   
   // Security
@@ -460,7 +462,7 @@ export default function Settings() {
               style={{ background: '#ef4444', border: 'none', width: 'fit-content', padding: '0.75rem 2rem' }}
               onClick={async () => {
                 await supabase.auth.signOut();
-                window.location.href = '/welcome';
+                navigate('/welcome');
               }}
             >
               Sign Out

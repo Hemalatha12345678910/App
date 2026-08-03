@@ -2,10 +2,11 @@ package com.example.smileguardai.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
-
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+// Website exact color tokens from index.css
+val PrimaryBlue = Color(0xFF004B87)
+val PrimaryBlueHover = Color(0xFF003366)
+val PrimaryLight = Color(0xFFE6F0FA)
+val TextMain = Color(0xFF0F172A)
+val TextMuted = Color(0xFF64748B)
+val BorderColor = Color(0xFFE2E8F0)
+val SurfaceBg = Color(0xFFFFFFFF)
